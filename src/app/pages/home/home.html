@@ -1,0 +1,105 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <span class="hero-label">Energia. Inovação. Brasil.</span>
+    <h1 class="hero-titulo">
+      Movendo o futuro<br>
+      <em>com a força do petróleo.</em>
+    </h1>
+    <p class="hero-subtitulo">
+      Da exploração offshore ao desenvolvimento social, a Petro Energy lidera a produção energética
+      nacional com responsabilidade e tecnologia de ponta.
+    </p>
+    <div class="hero-acoes">
+      <a routerLink="/institucional" class="btn-primario">Conheça a empresa</a>
+      <a routerLink="/projetos-sociais" class="btn-secundario">Projetos sociais</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-numero">2.1M</span>
+      <span class="stat-label">barris/dia</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-numero">47</span>
+      <span class="stat-label">anos de história</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-numero">85K</span>
+      <span class="stat-label">colaboradores</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEED DE POSTS -->
+<section class="feed">
+  <div class="feed-container">
+
+    <div class="feed-header">
+      <div class="feed-header-texto">
+        <span class="secao-label">Últimas notícias</span>
+        <h2>Nossos projetos em destaque</h2>
+      </div>
+    </div>
+
+    <!--caso carregando -->
+    @if (carregando()) {
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Carregando notícias...</p>
+      </div>
+    }
+
+    <!-- caso de erro -->
+    @if (erro()) {
+      <div class="erro-aviso">
+        <p>{{ erro() }}</p>
+      </div>
+    }
+
+    <!-- caso esteja carregado  -->
+    @if (!carregando() && !erro() && ultimosPosts().length > 0) {
+      <div class="posts-grid">
+        @for (post of ultimosPosts(); track post.id) {
+          <article class="post-card">
+            <div class="post-card-imagem">
+              <img [src]="post.imagem" [alt]="post.titulo" />
+              <div class="post-card-overlay"></div>
+              <span class="post-categoria">{{ post.categoria }}</span>
+            </div>
+            <div class="post-card-corpo">
+              <time class="post-data">{{ formatarData(post.data) }}</time>
+              <h3 class="post-titulo">{{ post.titulo }}</h3>
+              <p class="post-resumo">{{ post.resumo }}</p>
+              <a [routerLink]="['/post', post.id]" class="post-link">
+                Ler reportagem completa
+                <span class="seta">→</span>
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    }
+
+    <!-- caso nao tenha posts -->
+    @if (!carregando() && !erro() && ultimosPosts().length === 0) {
+      <p class="sem-posts">Nenhuma notícia disponível no momento.</p>
+    }
+
+  </div>
+</section>
+
+<!-- button para ver os projetos sociais -->
+<section class="cta">
+  <div class="cta-container">
+    <h2>Energia que transforma vidas</h2>
+    <p>Conheça como a Petro Energy investe nas comunidades onde opera, gerando desenvolvimento social e preservando o futuro.</p>
+    <a routerLink="/projetos-sociais" class="btn-primario">Ver projetos sociais</a>
+  </div>
+</section>

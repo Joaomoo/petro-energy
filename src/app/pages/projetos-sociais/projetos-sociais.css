@@ -1,0 +1,246 @@
+.projetos-page {
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* Header */
+.pagina-header {
+  padding: 5rem 2rem 4rem;
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.05) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.pagina-header-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.secao-label {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 0.75rem;
+}
+
+.pagina-header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--branco);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.pagina-header p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Impacto */
+.impacto {
+  background: rgba(212, 160, 23, 0.04);
+  border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  border-top: 1px solid rgba(212, 160, 23, 0.1);
+  padding: 2.5rem 2rem;
+}
+
+.impacto-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.impacto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.impacto-numero {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dourado);
+  line-height: 1;
+}
+
+.impacto-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.impacto-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(212, 160, 23, 0.2);
+}
+
+/* Projetos */
+.projetos-lista {
+  padding: 5rem 2rem;
+}
+
+.projetos-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.projeto-card {
+  background: var(--preto-suave);
+  padding: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+
+.projeto-card:hover {
+  background: rgba(212, 160, 23, 0.03);
+  border-color: rgba(212, 160, 23, 0.1);
+}
+
+.projeto-icone {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: rgba(212, 160, 23, 0.06);
+  border: 1px solid rgba(212, 160, 23, 0.15);
+}
+
+.projeto-corpo {
+  flex: 1;
+}
+
+.projeto-corpo h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.projeto-corpo p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.projeto-dados {
+  display: flex;
+  gap: 2rem;
+}
+
+.dado {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dado-valor {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dourado);
+}
+
+.dado-label {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.projeto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-top: 1rem;
+  transition: gap 0.2s;
+}
+
+.projeto-btn:hover {
+  gap: 0.8rem;
+}
+
+.seta {
+  display: inline-block;
+}
+
+/* Loading / Erro */
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(212, 160, 23, 0.2);
+  border-top-color: var(--dourado);
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+.erro-aviso {
+  text-align: center;
+  padding: 3rem;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.erro-aviso span {
+  display: block;
+  font-size: 2rem;
+  color: var(--dourado);
+  margin-bottom: 0.75rem;
+}
+
+.erro-aviso p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impacto-divider {
+    display: none;
+  }
+}

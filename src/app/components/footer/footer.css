@@ -1,0 +1,110 @@
+.footer {
+  background: #060810;
+  border-top: 1px solid rgba(212, 160, 23, 0.2);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.footer-marca .logo-symbol {
+  font-size: 2rem;
+  color: var(--dourado);
+}
+
+.footer-marca .logo-texto {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: var(--branco);
+  margin-left: 0.5rem;
+}
+
+.footer-marca .logo-texto strong {
+  color: var(--dourado);
+}
+
+.footer-slogan {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.footer-nav h4,
+.footer-contato h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--dourado);
+}
+
+.footer-contato p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.3rem;
+}
+
+.footer-rodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-rodape p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.disclaimer {
+  font-style: italic;
+  font-size: 0.7rem !important;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+}

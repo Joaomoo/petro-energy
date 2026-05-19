@@ -1,0 +1,275 @@
+.institucional-page {
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* Hero */
+.inst-hero {
+  position: relative;
+  padding: 3rem 2rem;
+  text-align: left;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.02) 0%, transparent 100%);
+}
+
+.inst-hero-bg {
+  display: none;
+}
+
+.inst-hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.secao-label {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.inst-hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--branco);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.inst-hero p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1rem;
+  max-width: 850px;
+}
+
+/* Missão Visão Propósito */
+.mvv {
+  padding: 5rem 2rem;
+  background: var(--preto-suave);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mvv-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2px;
+}
+
+.mvv-item {
+  padding: 2.5rem;
+  background: var(--preto);
+}
+
+.mvv-item.destaque {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.06) 0%, var(--preto) 100%);
+  border-left: 2px solid var(--dourado);
+}
+
+.mvv-icone {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.mvv-item h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 1rem;
+}
+
+.mvv-item p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Valores */
+.valores {
+  padding: 5rem 2rem;
+}
+
+.valores-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.valores-header {
+  margin-bottom: 3rem;
+}
+
+.valores-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--branco);
+  text-transform: uppercase;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.valor-card {
+  background: var(--preto-suave);
+  padding: 2rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.valor-card:hover {
+  background: rgba(212, 160, 23, 0.04);
+}
+
+.valor-numero {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(212, 160, 23, 0.1);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.valor-card h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 0.75rem;
+}
+
+.valor-card p {
+  font-size: 0.83rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* História / Timeline */
+.historia {
+  padding: 5rem 2rem;
+  background: var(--preto-suave);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.historia-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.historia-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.historia-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--branco);
+  text-transform: uppercase;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 40px 1fr;
+  align-items: start;
+  min-height: 70px;
+}
+
+.timeline-ano {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dourado);
+  text-align: right;
+  padding-right: 1rem;
+  padding-top: 0.15rem;
+}
+
+.timeline-linha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-linha::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: -10px;
+  width: 1px;
+  background: rgba(212, 160, 23, 0.2);
+}
+
+.timeline-ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dourado);
+  border: 2px solid var(--preto-suave);
+  position: relative;
+  z-index: 1;
+  margin-top: 3px;
+}
+
+.timeline-evento {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child .timeline-linha::before {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .mvv-container {
+    grid-template-columns: 1fr;
+  }
+
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 70px 30px 1fr;
+  }
+}

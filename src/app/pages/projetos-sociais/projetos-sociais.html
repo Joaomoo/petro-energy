@@ -1,0 +1,95 @@
+<div class="projetos-page">
+
+  <!-- Header da página -->
+  <header class="pagina-header">
+    <div class="pagina-header-container">
+      <span class="secao-label">Responsabilidade Social</span>
+      <h1>Projetos Sociais</h1>
+      <p>A Petro Energy acredita que desenvolvimento econômico e responsabilidade social caminham juntos. Conheça os programas que transformam as comunidades onde operamos.</p>
+    </div>
+  </header>
+
+  <!-- Números de impacto -->
+  <section class="impacto">
+    <div class="impacto-container">
+      <div class="impacto-item">
+        <span class="impacto-numero">185K+</span>
+        <span class="impacto-label">pessoas beneficiadas</span>
+      </div>
+      <div class="impacto-divider"></div>
+      <div class="impacto-item">
+        <span class="impacto-numero">84</span>
+        <span class="impacto-label">municípios atendidos</span>
+      </div>
+      <div class="impacto-divider"></div>
+      <div class="impacto-item">
+        <span class="impacto-numero">R$1.2Bi</span>
+        <span class="impacto-label">investidos em 5 anos</span>
+      </div>
+      <div class="impacto-divider"></div>
+      <div class="impacto-item">
+        <span class="impacto-numero">4</span>
+        <span class="impacto-label">programas ativos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lista de projetos -->
+  <section class="projetos-lista">
+    <div class="projetos-container">
+
+      @if (carregando()) {
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <p>Carregando projetos...</p>
+        </div>
+      }
+
+      @if (erro()) {
+        <div class="erro-aviso">
+          <p>{{ erro() }}</p>
+        </div>
+      }
+
+      @if (!carregando() && !erro()) {
+        <div class="projetos-grid">
+          @for (projeto of projetos(); track projeto.id) {
+
+            <div class="projeto-card">
+
+              <div class="projeto-icone">
+                <span>{{ getIcone(projeto.icone) }}</span>
+              </div>
+
+              <div class="projeto-corpo">
+
+                <h3>{{ projeto.nome }}</h3>
+                <p>{{ projeto.descricao }}</p>
+
+                <div class="projeto-dados">
+
+                  <div class="dado">
+                    <span class="dado-valor">{{ projeto.beneficiarios }}</span>
+                    <span class="dado-label">beneficiários</span>
+                  </div>
+
+                  <div class="dado">
+                    <span class="dado-valor">{{ projeto.municipios }}</span>
+                    <span class="dado-label">municípios</span>
+                  </div>
+                </div>
+
+                <a routerLink="/" class="projeto-btn">
+                  Ver notícias
+                  <span class="seta">→</span>
+                </a>
+              </div>
+            </div>
+          }
+        </div>
+      }
+
+    </div>
+  </section>
+
+</div>

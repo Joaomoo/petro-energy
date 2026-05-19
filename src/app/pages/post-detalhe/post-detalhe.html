@@ -1,0 +1,70 @@
+<div class="post-detalhe-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a routerLink="/">Início</a>
+      <span>›</span>
+      <span>Notícias</span>
+    </div>
+  </div>
+
+  <!-- Carregando -->
+  @if (carregando()) {
+    <div class="loading-page">
+      <div class="loading-spinner"></div>
+      <p>Carregando reportagem...</p>
+    </div>
+  }
+
+  <!-- Erro -->
+  @if (erro()) {
+    <div class="erro-page">
+      <p>{{ erro() }}</p>
+      <a routerLink="/" class="btn-voltar">← Voltar ao início</a>
+    </div>
+  }
+
+  <!-- Conteúdo do Post -->
+  @if (post()) {
+    <article class="post-artigo">
+
+      <!-- Imagem em destaque -->
+      @if (post()!.imagem) {
+        <div class="artigo-imagem">
+          <img [src]="post()!.imagem" [alt]="post()!.titulo" />
+        </div>
+      }
+
+      <!-- Cabeçalho do artigo -->
+      <header class="artigo-header">
+        <div class="artigo-header-container">
+          <span class="artigo-categoria">{{ post()!.categoria }}</span>
+          <h1 class="artigo-titulo">{{ post()!.titulo }}</h1>
+          <div class="artigo-meta">
+            <time>{{ formatarData(post()!.data) }}</time>
+          </div>
+          <p class="artigo-lead">{{ post()!.resumo }}</p>
+        </div>
+      </header>
+
+      <!-- Corpo do artigo -->
+      <div class="artigo-corpo">
+        <div class="artigo-corpo-container">
+          @for (paragrafo of getParagrafos(post()!.conteudo); track $index) {
+            <p>{{ paragrafo }}</p>
+          }
+        </div>
+      </div>
+
+      <!-- Rodapé do artigo -->
+      <div class="artigo-rodape">
+        <div class="artigo-rodape-container">
+          <a routerLink="/" class="btn-voltar">← Voltar às notícias</a>
+        </div>
+      </div>
+
+    </article>
+  }
+
+</div>

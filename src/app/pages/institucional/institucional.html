@@ -1,0 +1,85 @@
+<div class="institucional-page">
+
+  <!-- Hero institucional -->
+  <header class="inst-hero">
+    <div class="inst-hero-bg"></div>
+    <div class="inst-hero-container">
+      <span class="secao-label">Desde 1979</span>
+      <h1>Quem somos</h1>
+      <p> Fundada em 1979 na cidade do Rio de Janeiro, a PetroEnergy nasceu com o propósito claro de impulsionar o desenvolvimento socioeconômico do Brasil por meio da exploração energética. Iniciando a sua trajetória no ambiente onshore, a empresa rapidamente compreendeu que o futuro da energia exigia ousadia, inovação e capacidade técnica. Ao longo de mais de quatro décadas, a companhia expandiu as suas fronteiras, migrando para o ambiente marítimo e tornando-se uma das protagonistas na consolidação da era submarina e no desenvolvimento do Pré-Sal brasileiro.
+          Hoje, a PetroEnergy é muito mais do que uma empresa de extração de petróleo e gás. Somos uma plataforma integrada de energia, tecnologia e inteligência aplicada, focada em fornecer recursos essenciais que movem indústrias, frotas, cidades e lares em todo o território nacional. Entendemos que a nossa atuação é um dos pilares da soberania energética do Brasil, e assumimos essa responsabilidade com o máximo rigor técnico e operacional.
+          O nosso crescimento é pautado pelo equilíbrio estratégico entre a segurança operacional, a geração de valor para os nossos acionistas e colaboradores, e o compromisso inegociável com as comunidades e o ecossistema que nos acolhem. Olhamos para o passado com orgulho de uma trajetória consolidada por grandes marcos como a nossa abertura de capital na BOVESPA e o alcance de produções que superam 1 milhão de barris por day mas mantemos os olhos firmemente postos no futuro.</p>
+      <p> Tecnologia, Inovação e Transição Energética.</p>
+
+      <p> Na PetroEnergy, acreditamos que a transição para uma matriz energética de baixo carbono não se faz abandonando os recursos atuais, mas sim transformando a forma como os produzimos. O petróleo e o gás continuam a ser fundamentais para o crescimento económico mundial e para garantir que a energia permaneça acessível e segura para milhões de famílias. Por isso, o nosso foco está em produzir com a máxima eficiência e a menor pegada de carbono possível.
+          Investimos continuamente em tecnologia de ponta para a exploração offshore, automação de plataformas e engenharia de reservatórios. O nosso compromisso com a inovação reflete-se de forma clara nos nossos projetos mais recentes, que incluem a expansão estratégica para a Margem Equatorial e o desenvolvimento de programas pioneiros de CCS (Captura e Armazenamento de Carbono) em parceria com grandes operadoras globais, como a Equinor.
+          Até 2030, o nosso objetivo é consolidar a PetroEnergy como a empresa de energia mais eficiente, segura e responsável das Américas. Movemos o país hoje com a tecnologia e o comprometimento necessários para garantir a energia das próximas gerações.</p>
+    </div>
+  </header>
+
+  <!-- Missão, Visão e Valores -->
+  <section class="mvv">
+    <div class="mvv-container">
+
+      <div class="mvv-item destaque">
+        <span class="mvv-icone">◎</span>
+        <h3>Missão</h3>
+        <p>Produzir petróleo, gás e derivados com segurança, eficiência e responsabilidade, gerando valor para acionistas, colaboradores, clientes e para a sociedade brasileira, contribuindo com a soberania energética nacional.</p>
+      </div>
+
+      <div class="mvv-item">
+        <span class="mvv-icone">◈</span>
+        <h3>Visão</h3>
+        <p>Ser reconhecida até 2030 como a empresa de energia mais eficiente e responsável das Américas, referência em tecnologia de exploração offshore e em programas de transição energética.</p>
+      </div>
+
+      <div class="mvv-item">
+        <span class="mvv-icone">◇</span>
+        <h3>Propósito</h3>
+        <p>Energia é desenvolvimento. Acreditamos que o petróleo, produzido com responsabilidade, ainda é o pilar do crescimento do Brasil e de milhões de famílias que dependem de uma energia acessível e segura.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="valores">
+    <div class="valores-container">
+      <div class="valores-header">
+        <span class="secao-label">Nossos valores</span>
+        <h2>O que nos guia</h2>
+      </div>
+      <div class="valores-grid">
+        @for (valor of valores; track valor.titulo) {
+          <div class="valor-card">
+            <span class="valor-numero">{{ $index + 1 }}</span>
+            <h4>{{ valor.titulo }}</h4>
+            <p>{{ valor.descricao }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- História -->
+  <section class="historia">
+    <div class="historia-container">
+      <div class="historia-header">
+        <span class="secao-label">Nossa trajetória</span>
+        <h2>Uma história de conquistas</h2>
+      </div>
+      <div class="timeline">
+        @for (marco of historiaMarcos; track marco.ano) {
+          <div class="timeline-item">
+            <div class="timeline-ano">{{ marco.ano }}</div>
+            <div class="timeline-linha">
+              <div class="timeline-ponto"></div>
+            </div>
+            <div class="timeline-evento">{{ marco.evento }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+</div>

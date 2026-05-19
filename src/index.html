@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Petro Energy — Energia que move o Brasil</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Petro Energy S.A. — Líder em exploração e produção de petróleo e gás no Brasil. Conheça nossa história, projetos e iniciativas sociais.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+</head>
+<body>
+  <!-- app-root é o seletor do AppComponent. O Angular substitui esta tag pelo conteúdo renderizado. -->
+  <app-root></app-root>
+
+  <!-- VLibras - Acessibilidade em Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+</body>
+</html>

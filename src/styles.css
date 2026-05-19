@@ -1,0 +1,91 @@
+/* ================================================
+   PETRO ENERGY — Estilos Globais
+   Paleta: Preto profundo + Dourado industrial
+   Tipografia: Oswald (display) + Source Serif 4 (corpo)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ===== VARIÁVEIS DE DESIGN ===== */
+:root {
+  --preto: #05080f;
+  --preto-suave: #090c14;
+  --cinza-escuro: #111520;
+  --cinza-medio: #1a1f2e;
+  --branco: #f0ede8;
+  --branco-suave: rgba(240, 237, 232, 0.8);
+  --dourado: #d4a017;
+  --dourado-claro: #e8b420;
+  --dourado-escuro: #a07810;
+
+  --fonte-display: 'Oswald', sans-serif;
+  --fonte-corpo: 'Source Serif 4', Georgia, serif;
+
+  --sombra: 0 4px 30px rgba(0, 0, 0, 0.4);
+  --transicao: all 0.25s ease;
+}
+
+/* ===== RESET E BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--preto);
+  color: var(--branco);
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--branco);
+}
+
+p {
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  transition: var(--transicao);
+}
+
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--preto);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 160, 23, 0.3);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dourado);
+}
+
+/* ===== SELEÇÃO DE TEXTO ===== */
+::selection {
+  background: rgba(212, 160, 23, 0.25);
+  color: var(--branco);
+}
