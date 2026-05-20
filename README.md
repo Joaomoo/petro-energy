@@ -1,6 +1,6 @@
 # Petro Energy — Site Corporativo
 **Projeto acadêmico** | Códigos de Alta Performance - WEB | UNG  
-Trabalho semestral — Aula 10: SPA e Comunicação com Back-End
+Trabalho semestral
 
 ---
 
